@@ -1,0 +1,26 @@
+{
+  "name": "super-injector",
+  "version": "1.0.0",
+  "description": "a dependency injector",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinSiThu/super-injector.git"
+  },
+  "keywords": [
+    "dependency",
+    "injector"
+  ],
+  "author": "min si thu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MinSiThu/super-injector/issues"
+  },
+  "homepage": "https://github.com/MinSiThu/super-injector#readme"
+}
