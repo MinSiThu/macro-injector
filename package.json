@@ -1,5 +1,5 @@
 {
-  "name": "super-injector",
+  "name": "macro-injector",
   "version": "1.0.0",
   "description": "a dependency injector",
   "main": "index.js",
