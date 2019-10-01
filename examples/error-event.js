@@ -1,8 +1,8 @@
 
 // Error Handling
-let SuperInjector = require("../index");
-let superInjector = new SuperInjector();
-superInjector.on("error",message=>{
+let MacroInjector = require("../index");
+let macroInjector = new MacroInjector();
+macroInjector.on("error",message=>{
     console.log(message);
 })
-superInjector.addDependency("User","User String can't be injected");
+macroInjector.addDependency("User","User String can't be injected");

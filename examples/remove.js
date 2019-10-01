@@ -1,9 +1,9 @@
 
 // Simple Example
-let SuperInjector = require("../index");
-let superInjector = new SuperInjector();
+let MacroInjector = require("../index");
+let macroInjector = new MacroInjector();
 
-superInjector.addDependency("User",class{
+macroInjector.addDependency("User",class{
     constructor(name,age){
         this.name = name;
         this.age = age;
@@ -24,9 +24,9 @@ class UserService{
     }
 }
 
-let injectedUserService = superInjector.inject(UserService,"User");
+let injectedUserService = macroInjector.inject(UserService,"User");
 injectedUserService.setUser("The Creator of Super-Injector",19)
 injectedUserService.render();
 
-superInjector.removeDependency("User");
-superInjector.inject(UserService,"User");
+macroInjector.removeDependency("User");
+macroInjector.inject(UserService,"User");

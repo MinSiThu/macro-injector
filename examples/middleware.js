@@ -1,9 +1,9 @@
 
 // Simple Example
-let SuperInjector = require("../index");
-let superInjector = new SuperInjector();
+let MacroInjector = require("../index");
+let macroInjector = new MacroInjector();
 
-superInjector.addDependency("User",class{
+macroInjector.addDependency("User",class{
     constructor(name,age){
         this.name = name;
         this.age = age;
@@ -14,7 +14,7 @@ superInjector.addDependency("User",class{
     }
 })
 
-superInjector.applyMiddleware("User",function(){
+macroInjector.applyMiddleware("User",function(){
     console.log("Before Injection User");
 })
 
@@ -28,4 +28,4 @@ class UserService{
     }
 }
 
-let injectedUserService = superInjector.inject(UserService,"User");
+let injectedUserService = macroInjector.inject(UserService,"User");

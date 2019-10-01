@@ -4,10 +4,10 @@
 ## Sample Code
 ```javascript
 // Simple Example
-let SuperInjector = require("super-injector");
-let superInjector = new SuperInjector();
+let MacroInjector = require("macro-injector");
+let macroInjector = new MacroInjector();
 
-superInjector.addDependency("User",class{
+macroInjector.addDependency("User",class{
     constructor(name,age){
         this.name = name;
         this.age = age;
@@ -28,30 +28,30 @@ class UserService{
     }
 }
 
-let injectedUserService = superInjector.inject(UserService,"User");
+let injectedUserService = macroInjector.inject(UserService,"User");
 injectedUserService.setUser("The Creator of Super-Injector",19)
 injectedUserService.render();
 
-console.log(superInjector.dependencies())
+console.log(macroInjector.dependencies())
 ```
 
 ### Removing Dependency
 ```javascript
-superInjector.removeDependency("User");
+macroInjector.removeDependency("User");
 ```
 
 ## Middleware
 ```javascript
-superInjector.applyMiddleware("User",function(){
+macroInjector.applyMiddleware("User",function(){
     console.log("Before Injecting User");
 })
 ```
 
 ## Error Event
 ```javascript
-let superInjector = new SuperInjector();
-superInjector.on("error",message=>{
+let macroInjector = new MacroInjector();
+macroInjector.on("error",message=>{
     console.log(message);
 })
-superInjector.addDependency("User","User String can't be injected");
+macroInjector.addDependency("User","User String can't be injected");
 ```
